@@ -2,9 +2,84 @@
 @import './_normalize.less';
 @import './_var.less';
 
-#app {
-  .btn {
-    margin: 10px;
-    .button(@cyan, @cyan-hover);
+.content {
+  width: 1200px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+}
+
+header {
+  height: 40px;
+  padding: 10px 0;
+  text-align: center;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  position: relative;
+
+  .avatar {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 100px;
+    height: 40px;
+    width: 40px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      height: 7px;
+      width: 7px;
+      border-right: 2px solid #999;
+      border-bottom: 2px solid #999;
+      transform: rotate(45deg) translateY(-50%);
+      top: 50%;
+      right: -20px;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+    }
+  }
+}
+
+#logo {
+  background-image: url('~/assets/logo/logo.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 100px;
+  display: inline-block;
+  vertical-align: middle;
+  text-indent: -9999px;
+}
+
+.main {
+  display: flex;
+  position: relative;
+}
+
+.menu {
+  width: 300px;
+  min-height: 800px;
+  background-color: @dark;
+  color: #fff;
+}
+
+.menu-list {
+  li {
+    line-height: 45px;
+    cursor: pointer;
+    padding-left: 30px;
+
+    &.active {
+      color: @cyan;
+      background-color: rgb(67, 84, 102);
+    }
+
+    &:hover {
+      color: @cyan;
+    }
+
   }
 }
