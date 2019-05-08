@@ -4,10 +4,10 @@
   "description": "CURISE",
   "main": "index.js",
   "scripts": {
-    "dev:local": "node ./node_modules/parcel-bundler/bin/cli.js index.html --open",
-    "build:local": "rm -rf ./dist && node ./node_modules/parcel-bundler/bin/cli.js build index.html --public-url https://ms.momocdn.com/static/meet/ --no-source-maps",
-    "dev": "parcel index.html --open",
-    "build": "rm -rf ./dist && parcel build index.html --public-url https://ms.momocdn.com/static/meet/ --no-source-maps"
+    "dev:local": "node ./node_modules/parcel-bundler/bin/cli.js ./src/index.html --open",
+    "build:local": "rm -rf ./dist && node ./node_modules/parcel-bundler/bin/cli.js build ./src/index.html --public-url https://ms.momocdn.com/static/meet/ --no-source-maps",
+    "dev": "parcel ./src/index.html --open",
+    "build": "rm -rf ./dist && parcel build ./src/index.html --public-url https://ms.momocdn.com/static/meet/ --no-source-maps"
   },
   "repository": {
     "type": "git",
@@ -18,14 +18,12 @@
   "bugs": {
     "url": "https://github.com/CatBone/CURISE/issues"
   },
-  "homepage": "https://github.com/CatBone/CURISE#readme",
-  "dependencies": {
+  "homepage": "https://github.com/CatBone/CURISE",
+  "devDependencies": {
+    "less": "^3.9.0",
+    "typescript": "^3.4.5",
     "autoprefixer": "^9.5.1",
     "parcel-bundler": "^1.12.3",
     "postcss-modules": "^1.4.1"
-  },
-  "devDependencies": {
-    "less": "^3.9.0",
-    "typescript": "^3.4.5"
   }
 }

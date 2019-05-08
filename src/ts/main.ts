@@ -1,4 +1,4 @@
-import '../less/style.less'
+import '~/styles/index.less'
 
 const main: string = 'hello wrold'
 const delay = (ms: number) => new Promise(res => setTimeout(res, ms))
