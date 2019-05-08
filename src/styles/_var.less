@@ -1,0 +1,36 @@
+/* COLORS */
+@yellow: #ff9a2a;
+@green: #7fbc39;
+@cyan: #00b4cf;
+@cyan-hover: #01869a;
+@dark: #2d4054;
+@dark-hover: #435466;
+@bg-color: #f3f3f3;
+@bg-color-dark: #e1e4e6;
+
+/* BUTTONS */
+.button(@bg-color, @bg-color-hover) {
+  font-size: 14px;
+  line-height: 30px;
+  display: inline-block;
+  vertical-align: middle;
+  color: #fff;
+  padding: 0 15px;
+  background: @bg-color;
+  &:hover {
+    background: @bg-color-hover;
+  }
+}
+
+/* icons */
+.icon(@size) {
+  font-size: @size;
+  display: inline-block;
+  vertical-align: middle;
+}
+.icon-m {
+  .icon(20px);
+}
+.icon-s {
+  .icon(16px);
+}

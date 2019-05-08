@@ -1,13 +1,10 @@
 @import './_fonts.less';
 @import './_normalize.less';
-@a : red;
-@success: green;
+@import './_var.less';
+
 #app {
-  color: @a;
-  background: @success;
-  display: flex;
-  .box {
-    flex: 1;
-    flex-direction: column-reverse;
+  .btn {
+    margin: 10px;
+    .button(@cyan, @cyan-hover);
   }
 }
